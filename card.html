@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Months of Us</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff5f7; /* Very light pink */
+            font-family: 'Times New Roman', serif;
+        }
+
+        .card-wrapper {
+            width: 340px;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+            border: 1px solid #eee;
+        }
+
+        /* Front Page Styles */
+        #front-page {
+            transition: all 0.8s ease;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .flower-image {
+            width: 120px; /* Adjust based on your image size */
+            cursor: pointer;
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .flower-image:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .instruction {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        /* Inside Message Styles (Hidden initially) */
+        #inside-message {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease;
+        }
+
+        .main-letter {
+            line-height: 1.8;
+            color: #333;
+            text-align: left;
+            font-style: italic;
+            white-space: pre-line; /* Keeps your paragraph breaks */
+        }
+
+        .signature {
+            margin-top: 25px;
+            text-align: right;
+            font-weight: bold;
+            color: #d81b60;
+        }
+
+        /* Animation class */
+        .reveal {
+            display: block !important;
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-wrapper">
+        
+        <div id="front-page">
+            <div class="intro-text">To my adorable little Ceeleepyhead❤️🥺 ...</div>
+            
+            <img src="pic.webp" class="flower-image" alt="Flower" onclick="openCard()">
+            
+            <p class="instruction">Tap the flower to open</p>
+        </div>
+
+        <div id="inside-message">
+            <div class="main-letter">
+                My sunshine,
+
+                Its exactly 9 months ago since I've known you. I'm Grateful for each passing day and to share my life with you. I know i have'nt been the perfect boyfriend you would've dream of but i hope that you know how much i love you and care for you dearly. Even though we argue over the dumbness of reasons and we annoy each other alot but i know that our love for each other is much greater that our stupid fights. Here's to another more days months and years with you my sunshine. I love you
+            </div>
+            <div class="signature">I love You Baby❤️</div>
+        </div>
+
+    </div>
+
+    <script>
+        function openCard() {
+            // Hide the front page elements
+            document.getElementById('front-page').style.opacity = '0';
+            
+            setTimeout(() => {
+                document.getElementById('front-page').style.display = 'none';
+                
+                // Show the inside message
+                const inside = document.getElementById('inside-message');
+                inside.classList.add('reveal');
+            }, 800);
+        }
+    </script>
+</body>
+</html>
